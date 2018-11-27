@@ -1,5 +1,5 @@
 #!/bin/bash
-#usage bash script.sh in gene_sequences directory
+#usage bash script_1.sh
 #add newline and concatenate fasta files together then use muscle to align sequences
 for i in ~/biocomp/biocomputing_exercise11/gene_sequences/"sporecoat0[1-4].fasta"
 do
