@@ -4,12 +4,12 @@
 for i in "sporecoat0[1-4].fasta"
 do
 sed -e '$s/$/\n/' $i
-done > sporecoat.fasta
+done >> sporecoat.fasta
 
 for j in "transporter0[1-4].fasta"
 do
 sed -e '$s/$/\n/' $j
-done > transporter.fasta
+done >> transporter.fasta
 
 #alignments
 ~/muscle3.8.31_i86linux64 -in sporecoat.fasta -out sporecoat_align.fasta
