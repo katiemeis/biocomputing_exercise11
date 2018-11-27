@@ -1,8 +1,9 @@
 #!/bin/bash
 #part 2
 #build hmm transporter file, hmmsearch with 8 proteosome fasta files, and output names and number of hits to new file
+#usage script_2.sh
 
-~/local/bin/hmmbuild transporter.hmm ~/biocomp/biocomputing_exercise11/gene_sequences/transporter_align.fasta
+~/local/bin/hmmbuild transporter.hmm ~/biocomp/biocomputing_exercise11/transporter_align.fasta
 
 for i in ~/biocomp/biocomputing_exercise11/proteomes/*.fasta
 do
