@@ -1,0 +1,38 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov 25 21:15:09 2018
+
+@author: MeganHartle
+"""
+
+#Because this doesn't involve graphing, I am back to using Python code
+
+#problem #1
+
+import numpy
+
+
+filenames_spore = ['sporecoat01.fasta', 'sporecoat02.fasta', 'sporecoat03.fasta', 'sporecoat04.fasta']
+for file in filenames_spore:
+    do
+    sed -e '$s/$/\n/' $file
+done >> sporecoat_all.fasta
+
+
+filenames_transporter = ['transporter01.fasta', 'transporter02.fasta', 'transporter03.fasta', 'transporter04.fasta']
+for file in filenames_transporter:
+    do
+    sed -e '$s/$/\n/' $file
+done >> transporter_all.fasta
+            
+
+#Align sporecoat and transporter files
+
+~/muscle3.8.31_i86darwin32 -in sporecoat_all.fasta -out sporecoat_all.align
+
+~/muscle3.8.31_i86darwin32 -in transporter_all.fasta -out transporter_all.align
+
+#problem #2
+
+~/local/bin/hmmbuild transporter_all.hmm transporter_all.align
