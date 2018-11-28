@@ -1,0 +1,26 @@
+#For loop to put all transporters in one file
+
+for file in ../gene_sequences/transporter*
+do
+	cat $file >> transporters.fasta
+	echo -e "\n" >> transporters.fasta
+done
+
+
+
+#For loop to put all sporecoats in one file
+
+for file in ../gene_sequences/sporecoat*
+do
+	cat $file >> sporecoats.fasta
+	echo -e "\n" >> sporecoats.fasta
+done
+
+
+#For Loop to make the sequence aligment using muscle
+
+for file in *s.fasta
+do 
+	~/muscle3.8.31_i86linux64 -in $file -out $file.align
+	
+done
