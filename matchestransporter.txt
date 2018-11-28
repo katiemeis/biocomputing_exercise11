@@ -1,0 +1,16 @@
+../Lecture21files/Arthrobacter.fasta
+1
+../Lecture21files/Bacillus.fasta
+1
+../Lecture21files/Clostridium.fasta
+0
+../Lecture21files/Flavobacterium.fasta
+1
+../Lecture21files/Limnohabitans.fasta
+1
+../Lecture21files/Rhizobium.fasta
+0
+../Lecture21files/Roseobacter.fasta
+1
+../Lecture21files/Verrucomicrobia.fasta
+0
