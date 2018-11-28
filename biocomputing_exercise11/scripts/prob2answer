@@ -1,0 +1,13 @@
+#Using Hammer to generate a profile
+
+~/local/bin/hmmbuild transporter.hmm transporters.fasta.align
+
+#Using Hammer to Search the eight proteomes
+
+for file in ../proteomes/*.fasta
+do
+	~/local/bin/hmmsearch --tblout trans.hits transporters.hmm $file
+	cat $file | grep -v "#" | wc -l >> transhits.txt
+done
+
+#The transhits.txt has the number of hits for each of the proteomes. 
