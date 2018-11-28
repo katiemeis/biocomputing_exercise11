@@ -1,0 +1,41 @@
+#Question 1
+#transfer files from local computer to remote computer
+scp /Users/elisabeth/Desktop/BioComputing/biocomputing_exercise11/gene_sequences/transporter01.fasta ekerns@remote103.helios.nd.edu:/afs/nd.edu/user20/ekerns/local/bin
+#repeated for all 4 sporecoat files and all 4 transporter files 
+
+#sporecoat
+#combine all sporecoat files into one file 
+#run combinesporecoat.sh
+bash combinesporecoat.sh sporecoat01.fasta sporecoat02.fasta sporecoat03.fasta sporecoat04.fasta
+#ouptut is sporecoat_all.fasta
+
+#run muscle on sporecoat to produce
+bash musclesporecoat.sh 
+#output is sporecoat_all.align 
+
+#transporter
+#combine all transporter files into one file 
+#run combinetransporter.sh
+bash combinetransporter.sh transporter01.fasta transporter02.fasta transporter03.fasta transporter04.fasta 
+#output is transporter_all.fasta
+
+#run muscle on transporter to produce aligned sequence
+bash musclestransporter.sh
+#output is transporter_all.align
+
+
+#Question 2
+
+#generates HMM profile for transporter gene
+#run hmmbuild shell script 
+bash hmmbuild_transporter.sh 
+#output is transporter_all.hmm : HMM profile
+
+#may get segmentation error core dumped 
+#I resolved this error by deleting transporter_all.align file and then reruning bash from Question 1
+
+#use HMMer to search eight bacterial proteomøes fasta files
+#run hmmsearch shell script 
+bash hmmsarch_transporter.sh sporeocoat01.fasta sporecoat02.fasta sporecoat03.fasta sporecoat04.fasta transporter01.fasta transporter02.fasta transporter03.fasta transporter04.fasta
+#output is $file.hits for each input file that gives number of hits compared to HMM profile for transporter gene 
+
