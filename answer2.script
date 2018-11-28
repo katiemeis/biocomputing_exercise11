@@ -1,0 +1,9 @@
+#code is written assuming all files used are in the current working directory with the exception 
+# of hmmsearch 
+#loop searching all proteome files with transporter hmm
+for file in *fasta
+        do
+        echo "$file" >> matches.transporter
+        ../hmmsearch --tblout file sporecoat.hmm $file
+        grep -v "#" file | wc -l >> matches.transporter
+        done
