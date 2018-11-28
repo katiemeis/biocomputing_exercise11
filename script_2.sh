@@ -14,5 +14,5 @@ for j in ~/biocomp/biocomputing_exercise11/proteomes/*.csv
 do
 echo $(basename -s .csv "$j")
 grep -v '#' "$j" | wc -l
-done >> HMM_Proteome_Hits.txt
+done >> proteosome_HMM_hits.txt
 
