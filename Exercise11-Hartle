@@ -36,3 +36,16 @@ done >> transporter_all.fasta
 #problem #2
 
 ~/local/bin/hmmbuild transporter_all.hmm transporter_all.align
+
+proteome_files = ['Arthrobacter.fasta', 'Bacillus.fasta', 'Clostridium.fasta', 'Flavobacterium.fasta', 'Limnohabitans.fasta', 'Rhizobium.fasta', 'Roseobacter.fasta', 'Verrucomicrobia.fasta']
+for file in proteome_files:
+    do
+    ~/local/bin/hmmsearch --tblout "$file_alignment.fasta" transporter_all.hmm "$file"
+done
+    
+for file in *_alignment.fasta:
+    do
+    echo $file >> HMM_proteome.txt
+    grep -v "#" $file |wc -l >> HMM_proteome.txt
+done
+    
