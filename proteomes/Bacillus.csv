@@ -1,0 +1,14 @@
+#                                                                 --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name          accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#  ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+tr|A6CMF6|A6CMF6_9BACI -          transporter_alligned -            1.8e-06   24.9  32.9   9.7e-06   22.5  32.9   2.2   1   1   0   1   1   1   1 -
+#
+# Program:         hmmsearch
+# Version:         3.2 (June 2018)
+# Pipeline mode:   SEARCH
+# Query file:      transporter_combined.hmm
+# Target file:     Bacillus.fasta
+# Option settings: /afs/crc.nd.edu/user/f/fhuizar/local/bin/hmmsearch --tblout Bacillus.csv transporter_combined.hmm Bacillus.fasta 
+# Current dir:     /afs/crc.nd.edu/user/f/fhuizar/biocomputing_exercise11/proteomes
+# Date:            Tue Nov 27 22:06:54 2018
+# [ok]

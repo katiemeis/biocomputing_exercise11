@@ -1,0 +1,13 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+#
+# Program:         hmmsearch
+# Version:         3.2 (June 2018)
+# Pipeline mode:   SEARCH
+# Query file:      transporter_combined.hmm
+# Target file:     Clostridium.fasta
+# Option settings: /afs/crc.nd.edu/user/f/fhuizar/local/bin/hmmsearch --tblout Clostridium.csv transporter_combined.hmm Clostridium.fasta 
+# Current dir:     /afs/crc.nd.edu/user/f/fhuizar/biocomputing_exercise11/proteomes
+# Date:            Tue Nov 27 22:06:54 2018
+# [ok]
